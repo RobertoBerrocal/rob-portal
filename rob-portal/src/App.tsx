@@ -1,17 +1,29 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import { Box } from "@chakra-ui/react";
+import Profile from "./components/Profile";
 
-function App() {
+const App = () => {
   return (
-    <Box textAlign="center" p={10}>
-      <Heading>Bienvenido a mi Portafolio 🚀</Heading>
-      <Text fontSize="lg" mt={4}>
-        Este es un proyecto construido con React, TypeScript y Chakra UI.
-      </Text>
-      <Button colorScheme="teal" mt={6}>
-        Explorar
-      </Button>
-    </Box>
+    <>
+      <Box display="flex" flexDirection="column" minH="100vh">
+        <Navbar />
+        <Box flex="1">
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Box>
+      </Box>
+    </>
   );
-}
+};
 
 export default App;
