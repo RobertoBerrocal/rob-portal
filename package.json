@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@chakra-ui/icons": "^2.2.4",
     "react-router-dom": "^7.1.5"
   },
   "scripts": {

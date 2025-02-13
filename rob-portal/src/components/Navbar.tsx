@@ -6,7 +6,7 @@ const Navbar = () => {
     <Box bg="blue.900" color="white" py={4} px={8}>
       <Flex justify="space-between" align="center">
         <NavLink to="/profile" style={{ fontSize: "xl", fontWeight: "bold" }}>
-          Roberto Berrocal World
+          Roberto Berrocal
         </NavLink>
         <Flex gap={4}>
           <NavLink to="/profile">Profile</NavLink>
