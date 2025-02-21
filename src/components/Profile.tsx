@@ -6,7 +6,6 @@ import {
   AccordionRoot,
 } from "@chakra-ui/react";
 import Contact from "./Contact";
-// import "../assets/roberto-profile.jpg";
 import robertoProfile from "../assets/roberto-profile.jpg";
 
 const TEXT = `Experienced Data Analyst with a Bachelor's
@@ -32,7 +31,7 @@ const AboutMe = () => {
     <AccordionRoot width={"auto"} margin={5} collapsible defaultValue={["b"]}>
       {items.map((item, index) => (
         <AccordionItem key={index} value={item.value}>
-          <AccordionItemTrigger justifyContent={"center"}>
+          <AccordionItemTrigger cursor={"pointer"} justifyContent={"center"}>
             {item.title}
           </AccordionItemTrigger>
           <AccordionItemContent minWidth={100} maxWidth={700}>
