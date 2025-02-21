@@ -2,26 +2,42 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import { Card } from "@chakra-ui/react";
 import { List } from "@chakra-ui/react";
 
-interface ExperienceProps {
-  role: string;
-  company: string;
-  path: string;
-  tasks: string[];
-  year: string;
+interface HorizontalCardProps {
+  imagePath?: string;
+  title: string;
+  subtitle?: string;
+  description: string | string[];
+  footer?: string;
+  imgmaxW?: string;
+  imgW?: string;
+  maxW?:
+    | "xs"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "5xl"
+    | "6xl"
+    | "7xl"
+    | "8xl"
+    | "9xl";
 }
 
-const HorizontalCard: React.FC<ExperienceProps> = ({
-  role,
-  company,
-  path,
-  tasks,
-  year,
+const HorizontalCard: React.FC<HorizontalCardProps> = ({
+  title,
+  subtitle,
+  imagePath,
+  description,
+  footer,
+  maxW = "xl",
+  imgmaxW = "200px",
+  imgW = "200px",
 }) => {
   return (
     <Card.Root
       flexDirection="row"
       overflow="hidden"
-      maxW="5xl"
+      maxW={maxW}
       bg="white"
       _hover={{ bg: "grey.300" }}
       textAlign={"center"}
@@ -30,8 +46,14 @@ const HorizontalCard: React.FC<ExperienceProps> = ({
       m={5}
     >
       {/* Imagen */}
-      <Box>
-        <Image objectFit="cover" maxW="200px" src={path} alt={role} />
+      <Box alignItems={"center"}>
+        <Image
+          objectFit="cover"
+          maxW={imgmaxW}
+          src={imagePath}
+          alt={title}
+          w={imgW}
+        />
       </Box>
 
       {/* Contenido */}
@@ -40,35 +62,38 @@ const HorizontalCard: React.FC<ExperienceProps> = ({
           paddingTop={0}
           paddingBottom={0}
           paddingRight={4}
-          paddingLeft={6}
+          marginLeft={4}
         >
           <Card.Title mb="2">
-            {role}
-            <Text textStyle={"sm"} fontStyle={"italic"}>
-              {" "}
-              @{company}{" "}
-            </Text>
+            {title}
+            {subtitle && (
+              <Text fontSize="sm" fontStyle="italic">
+                @{subtitle}
+              </Text>
+            )}
           </Card.Title>
           <Card.Description color="black">
-            <List.Root>
-              {tasks.map((task, index) => (
-                <List.Item key={index}>{task}</List.Item>
-              ))}
-            </List.Root>
+            {Array.isArray(description) ? (
+              <List.Root>
+                {description.map((desc, index) => (
+                  <List.Item key={index}>{desc}</List.Item>
+                ))}
+              </List.Root>
+            ) : (
+              <Text>{description}</Text>
+            )}
           </Card.Description>
         </Card.Body>
       </Box>
-
       {/* Footer */}
-      <Box
-      //   minWidth={"200px"}
-      // textAlign="right"
-      >
-        <Card.Footer>
-          <Text fontSize="sm" fontStyle="italic">
-            {year}
-          </Text>
-        </Card.Footer>
+      <Box>
+        {footer && (
+          <Card.Footer>
+            <Text fontSize="sm" fontStyle="italic">
+              {footer}
+            </Text>
+          </Card.Footer>
+        )}
       </Box>
     </Card.Root>
   );
