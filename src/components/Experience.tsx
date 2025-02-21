@@ -80,7 +80,15 @@ const Experience = () => {
       // align="stretch"
       >
         {experiences.map((exp, index) => (
-          <HorizontalCard key={index} {...exp} />
+          <HorizontalCard
+            key={index}
+            title={exp.role}
+            subtitle={exp.company}
+            imagePath={exp.path}
+            description={exp.tasks}
+            footer={exp.year}
+            maxW="5xl"
+          />
         ))}
       </VStack>
     </Box>

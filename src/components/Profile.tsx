@@ -44,7 +44,14 @@ const AboutMe = () => {
 };
 const Profile = () => {
   return (
-    <Box textAlign="center" py={10} bg="blue.800" color="white" minH="100vh">
+    <Box
+      id="profile"
+      textAlign="center"
+      py={10}
+      bg="blue.800"
+      color="white"
+      minH="100vh"
+    >
       <VStack separator={<Separator />}>
         <Text fontSize="5xl" fontWeight="bold">
           Profile
