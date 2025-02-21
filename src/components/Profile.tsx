@@ -6,6 +6,8 @@ import {
   AccordionRoot,
 } from "@chakra-ui/react";
 import Contact from "./Contact";
+// import "../assets/roberto-profile.jpg";
+import robertoProfile from "../assets/roberto-profile.jpg";
 
 const TEXT = `Experienced Data Analyst with a Bachelor's
 in Industrial Engineering from the Pontifical
@@ -48,11 +50,7 @@ const Profile = () => {
         <Text fontSize="5xl" fontWeight="bold">
           Profile
         </Text>
-        <Image
-          borderRadius="full"
-          boxSize="150px"
-          src="https://source.unsplash.com/150x150/?developer"
-        />
+        <Image borderRadius="full" boxSize="150px" src={robertoProfile} />
         <Text fontSize="5xl" fontWeight="bold">
           Roberto Berrocal
         </Text>

@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -14,6 +14,7 @@ const App = () => {
         <Navbar />
         <Box flex="1">
           <Routes>
+            <Route path="/" element={<Navigate to="/profile" replace />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/experience" element={<Experience />} />
