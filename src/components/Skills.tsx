@@ -1,98 +1,70 @@
-import {
-  Box,
-  Heading,
-  SimpleGrid,
-  Text,
-  RatingGroup,
-  HStack,
-  Icon,
-  Card,
-  CardBody,
-  CardTitle,
-  CardDescription,
-  CardFooter,
-} from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import powerBiPic from "../assets/power bi.png";
+import pythonPic from "../assets/python.png";
+import sqlPic from "../assets/sql.png";
+import typescriptPic from "../assets/typescript.png";
+import reactPic from "../assets/react.png";
+import gitPic from "../assets/git.png";
+import HorizontalCard from "./horizontalCard";
 
 const skillsSet = [
   {
-    name: "Power BI",
+    title: "Power BI",
     description: "Business analytics service by Microsoft",
-    rating: 5,
+    imagePath: powerBiPic,
+    // rating: 5,
   },
   {
-    name: "Python",
+    title: "Python",
     description:
       "High-level programming language for general-purpose programming",
-    rating: 5,
+    imagePath: pythonPic,
+    // rating: 5,
   },
   {
-    name: "SQL",
+    title: "SQL",
     description: "Structured Query Language used for managing databases",
-    rating: 5,
+    imagePath: sqlPic,
+    // rating: 5,
   },
   {
-    name: "TypeScript",
+    title: "TypeScript",
     description:
       "Typed superset of JavaScript that compiles to plain JavaScript",
-    rating: 3,
+    imagePath: typescriptPic,
+    // rating: 3,
   },
   {
-    name: "React",
+    title: "React",
     description: "JavaScript library for building user interfaces",
-    rating: 3,
+    imagePath: reactPic,
+    // rating: 3,
   },
   {
-    name: "Git",
+    title: "Git",
     description:
       "Distributed version control system for tracking changes in source code",
-    rating: 2,
+    imagePath: gitPic,
+    // rating: 2,
   },
 ];
 
 const Skills = () => {
   return (
-    <Box id="skills" py={10} px={8} minH={"100vh"}>
-      <Heading textAlign="center" mb={6}>
+    <Box id="skills" py={10} px={8} minH={"100vh"} bg={"blue.800"}>
+      <Heading textAlign="center" mb={6} fontSize={"4xl"}>
         Tech Stack
       </Heading>
-      <SimpleGrid
-        columns={[2, 2]}
-        gap={4}
-        //   spacing={6}
-      >
-        {skillsSet.map((skills, index) => (
-          <Card.Root
-            _hover={{ bg: "blue.300" }}
-            textAlign={"left"}
+      <SimpleGrid columns={[1, 2, 3]}>
+        {skillsSet.map((skill, index) => (
+          <HorizontalCard
             key={index}
-            bg="blue.100"
-            color="black"
-            p={4}
-          >
-            <CardBody>
-              <CardTitle>{skills.name}</CardTitle>
-              <CardDescription
-                // fontStyle={"italic"}
-                marginTop={2}
-                marginBottom={2}
-                fontWeight={"bold"}
-                color={"black"}
-              >
-                {skills.description}
-              </CardDescription>
-              <CardFooter justifyContent={"center"} padding={0}>
-                {/* <HStack>
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <Icon
-                      as={StarIcon}
-                      key={i} // Usa "i" como key, NO "index"
-                      color={i < skills.rating ? "yellow.400" : "gray.300"}
-                    />
-                  ))}
-                </HStack> */}
-              </CardFooter>
-            </CardBody>
-          </Card.Root>
+            imgW="100px"
+            maxW="lg"
+            title={skill.title}
+            description={skill.description}
+            imagePath={skill.imagePath}
+          />
         ))}
       </SimpleGrid>
     </Box>

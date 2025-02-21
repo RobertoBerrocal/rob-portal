@@ -6,6 +6,7 @@ import {
   AccordionRoot,
 } from "@chakra-ui/react";
 import Contact from "./Contact";
+import robertoProfile from "../assets/roberto-profile.jpg";
 
 const TEXT = `Experienced Data Analyst with a Bachelor's
 in Industrial Engineering from the Pontifical
@@ -30,7 +31,7 @@ const AboutMe = () => {
     <AccordionRoot width={"auto"} margin={5} collapsible defaultValue={["b"]}>
       {items.map((item, index) => (
         <AccordionItem key={index} value={item.value}>
-          <AccordionItemTrigger justifyContent={"center"}>
+          <AccordionItemTrigger cursor={"pointer"} justifyContent={"center"}>
             {item.title}
           </AccordionItemTrigger>
           <AccordionItemContent minWidth={100} maxWidth={700}>
@@ -43,16 +44,19 @@ const AboutMe = () => {
 };
 const Profile = () => {
   return (
-    <Box textAlign="center" py={10} bg="blue.800" color="white" minH="100vh">
+    <Box
+      id="profile"
+      textAlign="center"
+      py={10}
+      bg="blue.800"
+      color="white"
+      minH="100vh"
+    >
       <VStack separator={<Separator />}>
         <Text fontSize="5xl" fontWeight="bold">
           Profile
         </Text>
-        <Image
-          borderRadius="full"
-          boxSize="150px"
-          src="https://source.unsplash.com/150x150/?developer"
-        />
+        <Image borderRadius="full" boxSize="150px" src={robertoProfile} />
         <Text fontSize="5xl" fontWeight="bold">
           Roberto Berrocal
         </Text>
