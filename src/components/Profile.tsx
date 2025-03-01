@@ -1,83 +1,84 @@
-import { Box, Text, Image, VStack, Link, Separator } from "@chakra-ui/react";
 import {
-  AccordionItem,
-  AccordionItemContent,
-  AccordionItemTrigger,
-  AccordionRoot,
+  Box,
+  Text,
+  Image,
+  VStack,
+  Link,
+  Stack,
+  HStack,
 } from "@chakra-ui/react";
-import Contact from "./Contact";
 import robertoProfile from "../assets/roberto-profile.jpg";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaCheckCircle,
+} from "react-icons/fa";
 
-const TEXT = `Experienced Data Analyst with a Bachelor's
-in Industrial Engineering from the Pontifical
-Catholic University of Peru. Skilled in data
-extraction, cleaning, and analysis using
-Python, SQL, and Power BI. Proficient in
-creating advanced data visualizations for
-clear insights. Detail-oriented problem
-solver with a track record of driving process
-improvements and cost optimization.
-Collaborative team player with a passion for
-continuous learning, currently pursuing an
-MSc in Data Science, AI, and Digital Business
-at GISMA University of Applied Sciences to
-further contribute to the success of dynamic
-organizations.`;
-
-const items = [{ value: "a", title: "About me", text: TEXT }];
-
-const AboutMe = () => {
-  return (
-    <AccordionRoot width={"auto"} margin={5} collapsible defaultValue={["b"]}>
-      {items.map((item, index) => (
-        <AccordionItem key={index} value={item.value}>
-          <AccordionItemTrigger cursor={"pointer"} justifyContent={"center"}>
-            {item.title}
-          </AccordionItemTrigger>
-          <AccordionItemContent minWidth={100} maxWidth={700}>
-            {item.text}
-          </AccordionItemContent>
-        </AccordionItem>
-      ))}
-    </AccordionRoot>
-  );
-};
 const Profile = () => {
   return (
-    <Box
-      id="profile"
-      textAlign="center"
-      py={10}
-      bg="blue.800"
-      color="white"
-      minH="100vh"
-    >
-      <VStack separator={<Separator />}>
-        <Text fontSize="5xl" fontWeight="bold">
-          Profile
-        </Text>
-        <Image borderRadius="full" boxSize="150px" src={robertoProfile} />
-        <Text fontSize="5xl" fontWeight="bold">
-          Roberto Berrocal
-        </Text>
-        <Text fontSize="2xl">
-          Data Analyst | Data Scientist | Front-End Developer
-        </Text>
-        <Text fontSize="xl" fontStyle="italic">
-          MSc Data Science, AI and Digital Business Candidate{" "}
-          <Link
-            href="https://www.gisma.com/"
-            color={"teal.300"}
-            fontWeight={"bold"}
-            target="_blank"
-            pointerEvents={""}
-          >
-            @GISMA University of Applied Sciences
-          </Link>
-        </Text>
-        <AboutMe />
-        <Contact />
-      </VStack>
+    <Box id="profile" py={10} bg="blue.800" color="white" minH="100vh">
+      <Stack
+        direction="row"
+        marginTop="50px"
+        marginBottom="50px"
+        marginLeft="80px"
+        gap={20}
+      >
+        <Box display="flex" justifyContent="center" alignItems="center">
+          <Image borderRadius="full" boxSize="300px" src={robertoProfile} />
+        </Box>
+        <VStack marginLeft={10} align="stretch" maxWidth="820px">
+          <Text fontSize="5xl" fontWeight="bold">
+            I am Roberto! Nice to meet you!
+          </Text>
+          <Text fontSize="2xl">
+            Data Analyst | Data Scientist | Front-End Developer
+          </Text>
+          <Text fontSize="lg">
+            I am a Data Analyst with a strong focus on building insightful
+            dashboards and conducting in-depth data analysis to help companies
+            make informed, data-driven decisions for success. Additionally, I
+            have experience in Front-End Development, crafting interactive and
+            user-friendly websites. Currently pursuing an MSc in Data Science,
+            AI & Digital Business at{" "}
+            <Link
+              href="https://www.gisma.com/"
+              color={"teal.300"}
+              fontWeight={"bold"}
+              target="_blank"
+              pointerEvents={""}
+              fontStyle={"italic"}
+            >
+              @GISMA University of Applied Sciences
+            </Link>
+          </Text>
+          <Text display={"flex"} alignItems={"center"} gap={2} marginTop={4}>
+            <FaMapMarkerAlt />
+            Berlin, Germany
+          </Text>
+          <Text display={"flex"} alignItems={"center"} gap={2} marginBottom={4}>
+            <FaCheckCircle color="green" />
+            Available for new projects
+          </Text>
+          <HStack>
+            <Link
+              href="https://www.linkedin.com/in/roberto-berrocal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin /> LinkedIn
+            </Link>
+            <Link
+              href="https://github.com/RobertoBerrocal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub /> GitHub
+            </Link>
+          </HStack>
+        </VStack>
+      </Stack>
     </Box>
   );
 };
