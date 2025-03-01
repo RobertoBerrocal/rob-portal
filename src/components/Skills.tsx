@@ -51,7 +51,13 @@ const skillsSet = [
 
 const Skills = () => {
   return (
-    <Box id="skills" py={10} px={8} minH={"100vh"} bg={"blue.800"}>
+    <Box
+      id="skills"
+      py={10}
+      px={8}
+      // minH={"100vh"}
+      bg={"blue.800"}
+    >
       <Heading textAlign="center" mb={6} fontSize={"4xl"}>
         Tech Stack
       </Heading>

@@ -17,7 +17,13 @@ import {
 
 const Profile = () => {
   return (
-    <Box id="profile" py={10} bg="blue.800" color="white" minH="100vh">
+    <Box
+      id="profile"
+      py={10}
+      bg="blue.800"
+      color="white"
+      // minH="100vh"
+    >
       <Stack
         direction="row"
         marginTop="50px"
