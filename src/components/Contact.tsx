@@ -10,7 +10,13 @@ import {
 
 const Contact = () => {
   return (
-    <Box id="contact" py={10} px={8} minH={"100vh"} bg={"blue.800"}>
+    <Box
+      id="contact"
+      py={10}
+      px={8}
+      // minH={"100vh"}
+      bg={"blue.800"}
+    >
       <Heading textAlign="center" mb={6}>
         Contact
       </Heading>
