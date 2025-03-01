@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Link, Text } from "@chakra-ui/react";
 import { Card } from "@chakra-ui/react";
 import { List } from "@chakra-ui/react";
 
@@ -21,6 +21,7 @@ interface HorizontalCardProps {
     | "7xl"
     | "8xl"
     | "9xl";
+  url_link?: string;
 }
 
 const HorizontalCard: React.FC<HorizontalCardProps> = ({
@@ -32,6 +33,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
   maxW = "xl",
   imgmaxW = "200px",
   imgW = "200px",
+  url_link,
 }) => {
   return (
     <Card.Root
@@ -39,21 +41,25 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
       overflow="hidden"
       maxW={maxW}
       bg="white"
-      _hover={{ bg: "grey.300" }}
+      _hover={{ bg: "gray.200" }}
       textAlign={"center"}
       color="black"
       p={4}
       m={5}
+      shadow={"md"}
+      borderRadius={"2xl"}
     >
       {/* Imagen */}
-      <Box alignItems={"center"}>
-        <Image
-          objectFit="cover"
-          maxW={imgmaxW}
-          src={imagePath}
-          alt={title}
-          w={imgW}
-        />
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Link href={url_link} target="_blank">
+          <Image
+            objectFit="cover"
+            maxW={imgmaxW}
+            src={imagePath}
+            alt={title}
+            w={imgW}
+          />
+        </Link>
       </Box>
 
       {/* Contenido */}
@@ -86,7 +92,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
         </Card.Body>
       </Box>
       {/* Footer */}
-      <Box>
+      <Box display="flex" justifyContent="center" alignItems="center">
         {footer && (
           <Card.Footer>
             <Text fontSize="sm" fontStyle="italic">

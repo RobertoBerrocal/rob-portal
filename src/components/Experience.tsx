@@ -17,6 +17,7 @@ const experiences = [
       "Actively collaborated in an agile environment, utilizing tools like Git for version control, branching, and merging workflows.",
     ],
     year: "September 2024 - Present",
+    url_link: "https://www.affinidi.com/",
   },
   {
     role: "Direct to Consumer Data Analyst",
@@ -33,6 +34,7 @@ const experiences = [
       "Created a new KPI: 'Availability Rate', that measured the availability of certain SKUs grouped by different portfolios. The ideal portfolio availability increased from 11% to 19% from January to June 2024.",
     ],
     year: "May 2022 - May 2024",
+    url_link: "https://www.ab-inbev.com/",
   },
   {
     role: "Digital Solutions Professional Intern",
@@ -46,6 +48,7 @@ const experiences = [
       "Automated the Salary Offer Proposal process.",
     ],
     year: "April 2021 - April 2022",
+    url_link: "https://www.statkraft.com/",
   },
   {
     role: "IT Architecture Pre-Professional Intern",
@@ -58,27 +61,24 @@ const experiences = [
       "Conducted ad hoc statistical data analysis.",
     ],
     year: "January - December 2020",
+    url_link: "https://www.viabcp.com/",
   },
 ];
 
 const Experience = () => {
   return (
     <Box
-      // width={"auto"}
       id="experience"
       py={10}
       px={8}
       minH={"100vh"}
       bg={"blue.800"}
       color={"white"}
-      // alignContent={"center"}
     >
       <Heading textAlign="center" mb={6} fontSize="4xl">
         Work Experience
       </Heading>
-      <VStack
-      // align="stretch"
-      >
+      <VStack>
         {experiences.map((exp, index) => (
           <HorizontalCard
             key={index}
@@ -88,6 +88,7 @@ const Experience = () => {
             description={exp.tasks}
             footer={exp.year}
             maxW="5xl"
+            url_link={exp.url_link}
           />
         ))}
       </VStack>
