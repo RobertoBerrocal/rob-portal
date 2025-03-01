@@ -22,6 +22,7 @@ const Profile = () => {
       py={10}
       bg="blue.800"
       color="white"
+      marginTop={12}
       // minH="100vh"
     >
       <Stack

@@ -1,20 +1,48 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { Link } from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
+
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Navbar = () => {
   return (
-    <Box bg="blue.900" color="white" py={4} px={8}>
+    <Box
+      bg="blue.900"
+      color="white"
+      py={4}
+      px={8}
+      position="fixed"
+      width="100%"
+      zIndex="1000"
+    >
       <Flex justify="space-between" align="center">
-        <NavLink to="/profile" style={{ fontSize: "xl", fontWeight: "bold" }}>
+        <Link
+          onClick={() => scrollToSection("profile")}
+          fontSize="xl"
+          fontWeight="bold"
+          cursor="pointer"
+        >
           Roberto Berrocal World
-        </NavLink>
+        </Link>
         <Flex gap={4}>
-          <Link href="#profile">Profile</Link>
-          <Link href="#skills">Skills</Link>
-          <Link href="#experience">Experience</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#contact">Contact</Link>
+          <Link onClick={() => scrollToSection("profile")} cursor="pointer">
+            Profile
+          </Link>
+          <Link onClick={() => scrollToSection("skills")} cursor="pointer">
+            Skills
+          </Link>
+          <Link onClick={() => scrollToSection("experience")} cursor="pointer">
+            Experience
+          </Link>
+          <Link onClick={() => scrollToSection("projects")} cursor="pointer">
+            Projects
+          </Link>
+          <Link onClick={() => scrollToSection("contact")} cursor="pointer">
+            Contact
+          </Link>
         </Flex>
       </Flex>
     </Box>

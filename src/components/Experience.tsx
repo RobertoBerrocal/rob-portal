@@ -78,6 +78,9 @@ const Experience = () => {
       <Heading textAlign="center" mb={6} fontSize="4xl">
         Work Experience
       </Heading>
+      <Heading textAlign="center" mb={6} fontSize="xl">
+        Here is a brief overview of my professional journey
+      </Heading>
       <VStack>
         {experiences.map((exp, index) => (
           <HorizontalCard

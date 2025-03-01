@@ -54,12 +54,15 @@ const Skills = () => {
     <Box
       id="skills"
       py={10}
-      px={8}
+      px={20}
       // minH={"100vh"}
       bg={"blue.800"}
     >
       <Heading textAlign="center" mb={6} fontSize={"4xl"}>
-        Tech Stack
+        Skills
+      </Heading>
+      <Heading textAlign="center" mb={6} fontSize={"xl"}>
+        Here is my tech stack
       </Heading>
       <SimpleGrid columns={[1, 2, 3]}>
         {skillsSet.map((skill, index) => (
