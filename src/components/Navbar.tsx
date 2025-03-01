@@ -1,5 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+import { Link } from "@chakra-ui/react";
 
 const Navbar = () => {
   return (
@@ -9,11 +10,11 @@ const Navbar = () => {
           Roberto Berrocal World
         </NavLink>
         <Flex gap={4}>
-          <NavLink to="/profile">Profile</NavLink>
-          <NavLink to="/experience">Experience</NavLink>
-          <NavLink to="/skills">Skills</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <Link href="#profile">Profile</Link>
+          <Link href="#skills">Skills</Link>
+          <Link href="#experience">Experience</Link>
+          <Link href="#projects">Projects</Link>
+          <Link href="#contact">Contact</Link>
         </Flex>
       </Flex>
     </Box>

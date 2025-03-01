@@ -1,29 +1,32 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import { Box } from "@chakra-ui/react";
+import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
-      <Box display="flex" flexDirection="column" minH="100vh">
-        <Navbar />
-        <Box flex="1">
-          <Routes>
-            <Route path="/" element={<Navigate to="/profile" replace />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+    <Box display="flex" flexDirection="column" minH="100vh">
+      <Navbar />
+      <Box flex="1">
+        <Box id="profile">
+          <Profile />
+        </Box>
+        <Box id="skills">
+          <Skills />
+        </Box>
+        <Box id="experience">
+          <Experience />
+        </Box>
+        {/* <Box id="projects">
+          <Projects />
+        </Box> */}
+        <Box id="contact">
+          <Contact />
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
