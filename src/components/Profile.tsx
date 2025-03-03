@@ -19,30 +19,43 @@ const Profile = () => {
   return (
     <Box
       id="profile"
-      py={10}
+      paddingTop={16}
+      paddingBottom={10}
       bg="blue.800"
       color="white"
       marginTop={12}
-      // minH="100vh"
+      display="flex"
+      justifyContent="center"
     >
       <Stack
-        direction="row"
-        marginTop="50px"
-        marginBottom="50px"
-        marginLeft="80px"
+        direction={{ base: "column", md: "row" }}
         gap={20}
+        align="center"
+        justify="center"
+        flexWrap="wrap"
+        textAlign={{ base: "center", md: "left" }}
       >
-        <Box display="flex" justifyContent="center" alignItems="center">
-          <Image borderRadius="full" boxSize="300px" src={robertoProfile} />
+        {/* Imagen */}
+        <Box display="flex" justifyContent="center">
+          <Image
+            borderRadius="full"
+            boxSize={{ base: "200px", md: "300px", lg: "350px" }}
+            src={robertoProfile}
+            marginBottom={10}
+            shadow={"md"}
+            alt="Roberto Berrocal"
+          />
         </Box>
-        <VStack marginLeft={10} align="stretch" maxWidth="820px">
+
+        {/* Texto */}
+        <VStack align={{ base: "center", md: "start" }} maxWidth="750px" py={4}>
           <Text fontSize="5xl" fontWeight="bold">
             I am Roberto! Nice to meet you!
           </Text>
-          <Text fontSize="2xl">
+          <Text fontSize="2xl" fontStyle={"italic"}>
             Data Analyst | Data Scientist | Front-End Developer
           </Text>
-          <Text fontSize="lg">
+          <Text fontSize="xl">
             I am a Data Analyst with a strong focus on building insightful
             dashboards and conducting in-depth data analysis to help companies
             make informed, data-driven decisions for success. Additionally, I
@@ -54,25 +67,39 @@ const Profile = () => {
               color={"teal.300"}
               fontWeight={"bold"}
               target="_blank"
-              pointerEvents={""}
               fontStyle={"italic"}
             >
               @GISMA University of Applied Sciences
             </Link>
           </Text>
-          <Text display={"flex"} alignItems={"center"} gap={2} marginTop={4}>
+          <Text
+            display={"flex"}
+            alignItems={"center"}
+            gap={2}
+            pt={4}
+            fontSize={"xl"}
+          >
             <FaMapMarkerAlt />
             Berlin, Germany
           </Text>
-          <Text display={"flex"} alignItems={"center"} gap={2} marginBottom={4}>
+          <Text
+            display={"flex"}
+            alignItems={"center"}
+            gap={2}
+            pt={4}
+            fontSize={"xl"}
+          >
             <FaCheckCircle color="green" />
             Available for new projects
           </Text>
-          <HStack>
+          <HStack gap={4} py={8}>
             <Link
               href="https://www.linkedin.com/in/roberto-berrocal"
               target="_blank"
               rel="noopener noreferrer"
+              display="flex"
+              alignItems="center"
+              gap={2}
             >
               <FaLinkedin /> LinkedIn
             </Link>
@@ -80,6 +107,9 @@ const Profile = () => {
               href="https://github.com/RobertoBerrocal"
               target="_blank"
               rel="noopener noreferrer"
+              display="flex"
+              alignItems="center"
+              gap={2}
             >
               <FaGithub /> GitHub
             </Link>

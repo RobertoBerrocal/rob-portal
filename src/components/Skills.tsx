@@ -54,22 +54,32 @@ const Skills = () => {
     <Box
       id="skills"
       py={10}
-      px={20}
-      // minH={"100vh"}
+      px={5}
       bg={"blue.800"}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
     >
-      <Heading textAlign="center" mb={6} fontSize={"4xl"}>
+      <Heading textAlign="center" mb={6} fontSize={"4xl"} pt={10}>
         Skills
       </Heading>
       <Heading textAlign="center" mb={6} fontSize={"xl"}>
         Here is my tech stack
       </Heading>
-      <SimpleGrid columns={[1, 2, 3]}>
+      <SimpleGrid
+        columns={{ base: 1, md: 3 }}
+        gap={6}
+        width="100%"
+        maxWidth="1100px"
+        alignItems="center"
+      >
         {skillsSet.map((skill, index) => (
           <HorizontalCard
             key={index}
             imgW="100px"
+            imgH="100px"
             maxW="lg"
+            cardHeight="180px"
             title={skill.title}
             description={skill.description}
             imagePath={skill.imagePath}
