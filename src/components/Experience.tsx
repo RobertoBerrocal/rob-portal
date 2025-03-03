@@ -72,10 +72,10 @@ const Experience = () => {
       py={10}
       px={8}
       minH={"100vh"}
-      bg={"blue.800"}
+      bg={"blue.900"}
       color={"white"}
     >
-      <Heading textAlign="center" mb={6} fontSize="4xl">
+      <Heading textAlign="center" mb={6} fontSize="4xl" pt={10}>
         Work Experience
       </Heading>
       <Heading textAlign="center" mb={6} fontSize="xl">
