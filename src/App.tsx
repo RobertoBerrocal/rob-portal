@@ -4,6 +4,7 @@ import Profile from "./components/Profile";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
       <Box flex="1">
         <Box id="profile">
           <Profile />
+        </Box>
+        <Box id="about me">
+          <About />
         </Box>
         <Box id="skills">
           <Skills />

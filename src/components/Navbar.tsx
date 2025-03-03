@@ -10,7 +10,7 @@ const scrollToSection = (id: string) => {
 const Navbar = () => {
   return (
     <Box
-      bg="blue.900"
+      bg="blue.950"
       color="white"
       py={4}
       px={8}
@@ -30,6 +30,9 @@ const Navbar = () => {
         <Flex gap={4}>
           <Link onClick={() => scrollToSection("profile")} cursor="pointer">
             Profile
+          </Link>
+          <Link onClick={() => scrollToSection("about me")} cursor="pointer">
+            About me
           </Link>
           <Link onClick={() => scrollToSection("skills")} cursor="pointer">
             Skills
