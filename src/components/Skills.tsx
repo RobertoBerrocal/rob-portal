@@ -10,40 +10,53 @@ import HorizontalCard from "./horizontalCard";
 const skillsSet = [
   {
     title: "Power BI",
-    description: "Business analytics service by Microsoft",
+    // description: "Business analytics service by Microsoft",
+    description: ["Insightful dashboards", "DAX", "M language", "KPIs"],
     imagePath: powerBiPic,
     // rating: 5,
   },
   {
     title: "Python",
-    description:
-      "High-level programming language for general-purpose programming",
+    description: [
+      "ML & AI libraries",
+      "Data analysis",
+      "Automation",
+      "Forecasting",
+    ],
     imagePath: pythonPic,
     // rating: 5,
   },
   {
     title: "SQL",
-    description: "Structured Query Language used for managing databases",
+    description: [
+      "Advanced queries",
+      "Views",
+      "Data modeling",
+      "ETL processes",
+    ],
     imagePath: sqlPic,
     // rating: 5,
   },
   {
     title: "TypeScript",
-    description:
-      "Typed superset of JavaScript that compiles to plain JavaScript",
+    description: ["Type safety", "Interfaces", "Classes", "Modules"],
     imagePath: typescriptPic,
     // rating: 3,
   },
   {
     title: "React",
-    description: "JavaScript library for building user interfaces",
+    description: [
+      "Components",
+      "Hooks",
+      "UI libraries",
+      "Front-end development",
+    ],
     imagePath: reactPic,
     // rating: 3,
   },
   {
     title: "Git",
-    description:
-      "Distributed version control system for tracking changes in source code",
+    description: ["Version control", "Branching", "Merging", "Collaboration"],
     imagePath: gitPic,
     // rating: 2,
   },
