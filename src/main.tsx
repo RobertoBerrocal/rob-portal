@@ -7,7 +7,7 @@ import App from "./App";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider>
-      <BrowserRouter>
+      <BrowserRouter basename="/rob-portal/">
         <App />
       </BrowserRouter>
     </Provider>
