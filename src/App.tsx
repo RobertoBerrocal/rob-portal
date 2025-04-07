@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 const App = () => {
   return (
@@ -23,9 +24,9 @@ const App = () => {
         <Box id="experience">
           <Experience />
         </Box>
-        {/* <Box id="projects">
+        <Box id="projects">
           <Projects />
-        </Box> */}
+        </Box>
         <Box id="contact">
           <Contact />
         </Box>

@@ -3,7 +3,7 @@ import { FaEnvelope, FaWhatsapp, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <Box id="contact" py={10} px={8} bg={"blue.800"}>
+    <Box id="contact" py={10} px={8} bg={"blue.900"}>
       <Heading textAlign="center" mb={6} fontSize={"4xl"}>
         Contact me
       </Heading>
