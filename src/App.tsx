@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import About from "./components/About";
-import Projects from "./components/Projects";
+import Profile from "./pages/Profile";
+import Experience from "./pages/Experience";
+import Skills from "./pages/Skills";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
 
 const App = () => {
   return (

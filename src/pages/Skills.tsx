@@ -5,7 +5,7 @@ import sqlPic from "../assets/sql.png";
 import typescriptPic from "../assets/typescript.png";
 import reactPic from "../assets/react.png";
 import gitPic from "../assets/git.png";
-import HorizontalCard from "./horizontalCard";
+import HorizontalCard from "../components/horizontalCard";
 
 const skillsSet = [
   {

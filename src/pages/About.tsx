@@ -74,19 +74,24 @@ const About = () => {
               my knowledge of React, TypeScript, and Node.js, with a strong
               focus on Front-End Development.
             </Text>
+              <Text fontSize={"lg"} py={1}>
+              On January 2026 I started a new challenge, joining Delivery Hero as a
+              Pricing Data Analyst, where I am currently working on pricing strategies
+              and data analysis for the company's delivery platform.
+            </Text>
             <Text fontSize={"lg"} py={2}>
               I am a self-driven learner who is always eager to embrace new
               challenges and opportunities for growth. My passion lies in
               technology, data, and innovation. I thrive in multicultural
               environments, enjoy team collaboration, and continuously seek to
               expand my expertise. As a native Spanish speaker, I am fluent in
-              English and currently learning German.
+              English and currently learning German and Arabic.
             </Text>
             <Text fontSize={"lg"} py={1}>
               Beyond my professional journey, I have a deep love for traveling,
-              exploring new cultures, and trying new food. I am a football
-              enthusiast, an avid Champions League fan, and a passionate dancer,
-              especially in salsa and bachata.
+              exploring new cultures, trying new food , and meeting new people. 
+              I am a passionate calisthenics enthusiast, and an avid Champions League fan
+              of course supporting Bayern München.
             </Text>
           </VStack>
           {/* Imagen */}
