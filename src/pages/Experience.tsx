@@ -1,11 +1,25 @@
 import { Box, Heading, VStack } from "@chakra-ui/react";
-import HorizontalCard from "./horizontalCard";
-import affinidiPic from "../assets/affinidi.jpg";
+import HorizontalCard from "../components/horizontalCard";
+import affinidiPic from "../assets/affinidi.png";
 import abInbevPic from "../assets/abi.svg.png";
 import statkraftPic from "../assets/statkraft.webp";
+import deliveryHeroPic from "../assets/delivery-hero.png";
 import bcpPic from "../assets/bcp.svg.png";
 
 const experiences = [
+    {
+    role: "Pricing Data Analyst",
+    company: "Delivery Hero SE",
+    path: deliveryHeroPic,
+    tasks: [
+      "Lead the Data Quality and Data Governance strategy for the Global Pricing Team, ensuring data accuracy and reliability across all pricing models and dashboards.",
+      "Monitor KPI's and automated alerts to identify and resolve data quality issues proactively using Monte Carlo.",
+      "Implemented end-to-end data pipelines on BigQuery, ensuring efficient data processing and integration for pricing analytics.",
+      "Create interactive dashboards and reports using Tableau, providing actionable insights to stakeholders and supporting data-driven decision-making.",
+    ],
+    year: "January 2026 - Present",
+    url_link: "https://www.deliveryhero.com/",
+  },
   {
     role: "Working Student Software Engineer",
     company: "Affinidi GmbH",
@@ -16,7 +30,7 @@ const experiences = [
       "Implemented end-to-end tests using Jest and React Testing Library.",
       "Actively collaborated in an agile environment, utilizing tools like Git for version control, branching, and merging workflows.",
     ],
-    year: "September 2024 - Present",
+    year: "September 2024 - September 2025",
     url_link: "https://www.affinidi.com/",
   },
   {

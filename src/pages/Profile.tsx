@@ -53,14 +53,26 @@ const Profile = () => {
             I am Roberto! Nice to meet you!
           </Text>
           <Text fontSize="2xl" fontStyle={"italic"}>
-            Data Analyst | Data Scientist | Front-End Developer
+            Data Analyst & Engineer | MSc in Data Science, AI & Digital Business
           </Text>
+          <Text fontSize="xl" py={4}>
+            Pricing at {""}
+            <Link
+              href="https://www.deliveryhero.com/"
+              color={"teal.300"}
+              fontWeight={"bold"}
+              target="_blank"
+              fontStyle={"italic"}
+            >
+              @Delivery Hero 
+            </Link>
+            </Text>
           <Text fontSize="xl">
             I am a Data Analyst with a strong focus on building insightful
             dashboards and conducting in-depth data analysis to help companies
             make informed, data-driven decisions for success. Additionally, I
             have experience in Front-End Development, crafting interactive and
-            user-friendly websites. Currently pursuing an MSc in Data Science,
+            user-friendly websites. On june 2024, I finished a MSc in Data Science,
             AI & Digital Business at{" "}
             <Link
               href="https://www.gisma.com/"
