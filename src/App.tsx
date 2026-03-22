@@ -12,24 +12,12 @@ const App = () => {
     <Box display="flex" flexDirection="column" minH="100vh">
       <Navbar />
       <Box flex="1">
-        <Box id="profile">
-          <Profile />
-        </Box>
-        <Box id="about me">
-          <About />
-        </Box>
-        <Box id="skills">
-          <Skills />
-        </Box>
-        <Box id="experience">
-          <Experience />
-        </Box>
-        <Box id="projects">
-          <Projects />
-        </Box>
-        <Box id="contact">
-          <Contact />
-        </Box>
+        <Profile />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
       </Box>
     </Box>
   );

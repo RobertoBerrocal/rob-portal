@@ -12,7 +12,7 @@ import roberto from "../assets/roberto_london.jpg";
 const About = () => {
   return (
     <Box
-      id="profile"
+      id="about"
       paddingTop={16}
       paddingBottom={16}
       bg="blue.900"
