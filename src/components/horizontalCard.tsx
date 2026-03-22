@@ -98,17 +98,17 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
               </Text>
             )}
           </Card.Title>
-          <Card.Description color="black">
-            {Array.isArray(description) ? (
+          {Array.isArray(description) ? (
+            <Box color="black">
               <List.Root>
                 {description.map((desc, index) => (
                   <List.Item key={index}>{desc}</List.Item>
                 ))}
               </List.Root>
-            ) : (
-              <Text>{description}</Text>
-            )}
-          </Card.Description>
+            </Box>
+          ) : (
+            <Card.Description color="black">{description}</Card.Description>
+          )}
         </Card.Body>
       </Box>
       {/* Footer */}
