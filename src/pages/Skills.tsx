@@ -5,15 +5,17 @@ import sqlPic from "../assets/sql.png";
 import typescriptPic from "../assets/typescript.png";
 import reactPic from "../assets/react.png";
 import gitPic from "../assets/git.png";
+import cloudPic from "../assets/cloud-comp.png";
+import tableauPic from "../assets/tableau.png";
+import figmaPic from "../assets/figma.png"
+
 import HorizontalCard from "../components/horizontalCard";
 
 const skillsSet = [
   {
     title: "Power BI",
-    // description: "Business analytics service by Microsoft",
     description: ["Insightful dashboards", "DAX", "M language", "KPIs"],
     imagePath: powerBiPic,
-    // rating: 5,
   },
   {
     title: "Python",
@@ -24,24 +26,45 @@ const skillsSet = [
       "Forecasting",
     ],
     imagePath: pythonPic,
-    // rating: 5,
   },
   {
     title: "SQL",
     description: [
       "Advanced queries",
-      "Views",
-      "Data modeling",
+      "Pipelines",
+      "Data modeling & architecture",
       "ETL processes",
     ],
     imagePath: sqlPic,
-    // rating: 5,
+  },
+  {
+    title: "Tableau",
+    description: [
+      "Dashboards",
+      "Visualization & storytelling",
+      "Calculated fields & measures",
+    ],
+    imagePath: tableauPic,
+  },
+  {
+    title: "Figma",
+    description: [
+      "Dashboard layouts",
+      "UI Design",
+      "Prototyping",
+      "Design Systems",
+    ],
+    imagePath: figmaPic,
   },
   {
     title: "TypeScript",
-    description: ["Type safety", "Interfaces", "Classes", "Modules"],
+    description: [
+      "Type safety",
+      "Interfaces",
+      "Classes",
+      "Modules"
+    ],
     imagePath: typescriptPic,
-    // rating: 3,
   },
   {
     title: "React",
@@ -52,13 +75,27 @@ const skillsSet = [
       "Front-end development",
     ],
     imagePath: reactPic,
-    // rating: 3,
   },
   {
     title: "Git",
-    description: ["Version control", "Branching", "Merging", "Collaboration"],
+    description: [
+      "Version control",
+      "Branching",
+      "Merging",
+      "Collaboration"
+    ],
     imagePath: gitPic,
-    // rating: 2,
+  },
+  {
+    title: "Cloud Tools",
+    description: [
+      "Snowflake",
+      "Databricks",
+      "BigQuery",
+      "AWS",
+    ],
+    imagePath: cloudPic,
+  
   },
 ];
 
