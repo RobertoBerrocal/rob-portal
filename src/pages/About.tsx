@@ -101,8 +101,8 @@ const About = () => {
               shadow={"md"}
               height={{ base: "400px", md: "500px", lg: "500px" }}
               width={{ base: "200px", md: "300px", lg: "300px" }}
-              // boxSize={{ base: "200px", md: "300px", lg: "300px" }}
               src={roberto}
+              alt="Roberto Berrocal in London"
             />
           </Box>
         </Stack>
