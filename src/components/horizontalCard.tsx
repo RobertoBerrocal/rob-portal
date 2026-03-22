@@ -39,6 +39,17 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
   url_link,
   cardHeight,
 }) => {
+  const imageEl = (
+    <Image
+      objectFit="cover"
+      maxW={imgmaxW}
+      src={imagePath}
+      alt={title}
+      w={imgW}
+      h={imgH}
+    />
+  );
+
   return (
     <Card.Root
       flexDirection="row"
@@ -57,18 +68,17 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
     >
       {/* Image */}
       <Box alignItems={"center"} alignContent={"center"}>
-        {" "}
-        <Link href={url_link} target="_blank">
-          {" "}
-          <Image
-            objectFit="cover"
-            maxW={imgmaxW}
-            src={imagePath}
-            alt={title}
-            w={imgW}
-            h={imgH}
-          />
-        </Link>
+        {url_link ? (
+          <Link
+            href={url_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {imageEl}
+          </Link>
+        ) : (
+          imageEl
+        )}
       </Box>
 
       {/* Content */}

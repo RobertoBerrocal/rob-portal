@@ -12,7 +12,7 @@ import roberto from "../assets/roberto_london.jpg";
 const About = () => {
   return (
     <Box
-      id="profile"
+      id="about"
       paddingTop={16}
       paddingBottom={16}
       bg="blue.900"
@@ -101,8 +101,8 @@ const About = () => {
               shadow={"md"}
               height={{ base: "400px", md: "500px", lg: "500px" }}
               width={{ base: "200px", md: "300px", lg: "300px" }}
-              // boxSize={{ base: "200px", md: "300px", lg: "300px" }}
               src={roberto}
+              alt="Roberto Berrocal in London"
             />
           </Box>
         </Stack>

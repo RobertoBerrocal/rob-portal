@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link onClick={() => scrollToSection("profile")} cursor="pointer">
             Profile
           </Link>
-          <Link onClick={() => scrollToSection("about me")} cursor="pointer">
+          <Link onClick={() => scrollToSection("about")} cursor="pointer">
             About me
           </Link>
           <Link onClick={() => scrollToSection("skills")} cursor="pointer">

@@ -16,7 +16,7 @@ const projects = [
     url: "https://github.com/RobertoBerrocal/E-CommerceSales",
   },
   {
-    title: "Chornic Kidney Disease",
+    title: "Chronic Kidney Disease",
     description: "Predicting Chronic Kidney Disease using Machine Learning.",
     imagePath: CkdPic,
     url: "https://github.com/RobertoBerrocal/ChronicKidneyDisease",
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "Air Pollution Forecasting",
     description:
-      "Forecasting of Air Pollution leves using Deep Learning and Time Series.",
+      "Forecasting of Air Pollution levels using Deep Learning and Time Series.",
     imagePath: AirPollutionPic,
     url: "https://github.com/RobertoBerrocal/AirPollutionForecasting",
   },
@@ -89,8 +89,8 @@ const Projects = () => {
           >
             <Image
               src={project.imagePath}
+              alt={`${project.title} — project preview`}
               h={"160px"}
-              // w={"200px"}
               objectFit="cover"
             />
             <Card.Body gap="2">
