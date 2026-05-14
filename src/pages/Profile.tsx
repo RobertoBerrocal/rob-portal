@@ -23,7 +23,6 @@ const Profile = () => {
       paddingBottom={10}
       bg="blue.800"
       color="white"
-      marginTop={12}
       display="flex"
       justifyContent="center"
     >
