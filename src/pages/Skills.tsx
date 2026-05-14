@@ -1,13 +1,13 @@
 import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import powerBiPic from "../assets/power bi.png";
 import pythonPic from "../assets/python.png";
-import sqlPic from "../assets/sql.png";
+import sqlPic from "../assets/SQL.png";
 import typescriptPic from "../assets/typescript.png";
 import reactPic from "../assets/react.png";
 import gitPic from "../assets/git.png";
 import cloudPic from "../assets/cloud-comp.png";
 import tableauPic from "../assets/tableau.png";
-import figmaPic from "../assets/figma.png"
+import figmaPic from "../assets/figma.png";
 
 import HorizontalCard from "../components/horizontalCard";
 

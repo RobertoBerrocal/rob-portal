@@ -52,10 +52,11 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
 
   return (
     <Card.Root
-      flexDirection="row"
-      gap={8}
+      flexDirection={{ base: "column", md: "row" }}
+      gap={{ base: 4, md: 8 }}
       overflow="hidden"
       maxW={maxW}
+      width="100%"
       bg="white"
       _hover={{ bg: "gray.200" }}
       textAlign={"center"}
@@ -64,10 +65,16 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
       m={5}
       shadow={"md"}
       borderRadius={"2xl"}
-      height={cardHeight}
+      height={{ base: "auto", md: cardHeight }}
     >
       {/* Image */}
-      <Box alignItems={"center"} alignContent={"center"}>
+      <Box
+        alignItems={"center"}
+        alignContent={"center"}
+        display="flex"
+        justifyContent="center"
+        flexShrink={0}
+      >
         {url_link ? (
           <Link
             href={url_link}
@@ -82,7 +89,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
       </Box>
 
       {/* Content */}
-      <Box flex="1" textAlign="left">
+      <Box flex="1" textAlign={{ base: "center", md: "left" }}>
         <Card.Body
           paddingTop={0}
           paddingBottom={0}
@@ -113,7 +120,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({
       </Box>
       {/* Footer */}
       {footer && (
-        <Box alignContent={"center"} alignItems={"center"}>
+        <Box alignContent={"center"} alignItems={"center"} flexShrink={0}>
           <Card.Footer paddingLeft={0} paddingRight={0} marginRight={4}>
             <Text fontSize="sm" fontStyle="italic">
               {footer}
