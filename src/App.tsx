@@ -9,7 +9,13 @@ import Projects from "./pages/Projects";
 
 const App = () => {
   return (
-    <Box display="flex" flexDirection="column" minH="100vh">
+    <Box
+      display="flex"
+      flexDirection="column"
+      minH="100vh"
+      bg="#071316"
+      color="white"
+    >
       <Navbar />
       <Box flex="1">
         <Profile />

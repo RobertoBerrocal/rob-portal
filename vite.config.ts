@@ -6,4 +6,16 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   base: "/rob-portal/",
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom", "react-router-dom"],
+          chakra: ["@chakra-ui/react", "@emotion/react", "@emotion/styled"],
+          motion: ["framer-motion"],
+          icons: ["react-icons"],
+        },
+      },
+    },
+  },
 });

@@ -25,7 +25,7 @@ Path alias: `@/`* → `src/*` (see `tsconfig.app.json`).
 | Command           | Description                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
 | `npm install`     | Install dependencies                                                     |
-| `npm run dev`     | Start dev server (usually [http:§§ocalhost:5173](http://localhost:5173)) |
+| `npm run dev`     | Start dev server (usually [http://localhost:5173](http://localhost:5173)) |
 | `npm run build`   | Typecheck (`tsc -b`) and production build to `dist/`                     |
 | `npm run preview` | Serve the production build locally                                       |
 | `npm run lint`    | Run ESLint                                                               |
@@ -80,7 +80,7 @@ src/
   App.tsx           # Shell: navbar + sections
   main.tsx          # Entry + providers + router basename
   pages/            # Section content (Profile, About, Skills, …)
-  components/       # Navbar, HorizontalCard, ui helpers
+  components/       # Navbar and ui helpers
   assets/           # Images
 ```
 

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Roberto Berrocal">
+  <rect width="64" height="64" rx="14" fill="#071316"/>
+  <path d="M15 46V16h18c7 0 12 4 12 10 0 4-2 7-6 9l8 11H36l-7-10h-5v10H15Zm9-18h8c3 0 5-1 5-4s-2-4-5-4h-8v8Z" fill="#73E2C3"/>
+  <path d="M45 16h4v30h-4z" fill="#F5B84B"/>
+</svg>

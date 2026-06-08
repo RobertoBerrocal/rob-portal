@@ -1,112 +1,126 @@
 import {
+  Badge,
   Box,
-  Text,
-  Image,
-  VStack,
-  Link,
-  Stack,
   Heading,
+  HStack,
+  Image,
+  Link,
+  SimpleGrid,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
-import roberto from "../assets/roberto_london.jpg";
+import roberto from "../assets/roberto-london-optimized.jpg";
+
+const principles = [
+  "Business-first analytics",
+  "Reliable data foundations",
+  "Clear dashboards and interfaces",
+  "Multicultural collaboration",
+];
 
 const About = () => {
   return (
     <Box
       id="about"
-      paddingTop={16}
-      paddingBottom={16}
-      bg="blue.900"
+      scrollMarginTop="84px"
+      py={{ base: 16, md: 24 }}
+      px={{ base: 5, md: 8, xl: 12 }}
+      bg="#092125"
       color="white"
-      display="flex"
-      justifyContent="center"
+      borderBottom="1px solid"
+      borderColor="whiteAlpha.100"
     >
-      <VStack align="center">
-        <Heading textAlign="center" mb={6} fontSize={"4xl"} pt={4}>
-          About me
-        </Heading>
-        <Heading textAlign="center" mb={6} fontSize="xl">
-          Know me better!
-        </Heading>
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          gap={20}
-          align="center"
-          justify="center"
-          flexWrap="wrap"
-          textAlign={{ base: "center", md: "left" }}
-        >
-          {/* Texto */}
-          <VStack align={{ base: "center", md: "start" }} maxWidth="750px">
-            <Text fontSize="4xl" fontWeight="bold">
-              Roberto Carlos Berrocal Chirinos
-            </Text>
-            <Text fontSize="lg" py={1}>
-              I am a Peruvian Industrial Engineer from the{" "}
-              <Link
-                href="https://www.pucp.edu.pe/"
-                color={"teal.300"}
-                fontWeight={"bold"}
-                target="_blank"
-                fontStyle={"italic"}
+      <SimpleGrid
+        maxW="1180px"
+        mx="auto"
+        columns={{ base: 1, lg: 2 }}
+        gap={{ base: 10, lg: 16 }}
+        alignItems="center"
+      >
+        <Box position="relative" order={{ base: 2, lg: 1 }}>
+          <Box
+            position="absolute"
+            inset={{ base: "-10px", md: "-14px" }}
+            border="1px solid"
+            borderColor="rgba(115, 226, 195, 0.42)"
+            borderRadius="28px"
+            transform="rotate(2deg)"
+          />
+          <Image
+            borderRadius="24px"
+            shadow="2xl"
+            height={{ base: "420px", md: "560px" }}
+            width="100%"
+            maxW="440px"
+            objectFit="cover"
+            objectPosition="center 35%"
+            src={roberto}
+            alt="Roberto Berrocal in London"
+            position="relative"
+          />
+        </Box>
+        <VStack align="start" gap={6} order={{ base: 1, lg: 2 }}>
+          <Badge
+            bg="rgba(115, 226, 195, 0.12)"
+            color="#73E2C3"
+            border="1px solid"
+            borderColor="rgba(115, 226, 195, 0.35)"
+            borderRadius="full"
+            px={4}
+            py={2}
+          >
+            About
+          </Badge>
+          <Heading
+            as="h2"
+            fontSize={{ base: "3xl", md: "5xl" }}
+            lineHeight="1.05"
+          >
+            Industrial engineering roots, data science depth and product-minded
+            execution.
+          </Heading>
+          <Text color="whiteAlpha.800" fontSize={{ base: "md", md: "lg" }}>
+            I am Roberto Carlos Berrocal Chirinos, a Peruvian Industrial
+            Engineer from the{" "}
+            <Link
+              href="https://www.pucp.edu.pe/"
+              color="#73E2C3"
+              fontWeight="800"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pontifical Catholic University of Peru
+            </Link>
+            . My path into data started in 2019 with Power BI, then expanded
+            into SQL, Python, analytics engineering and machine learning.
+          </Text>
+          <Text color="whiteAlpha.800" fontSize={{ base: "md", md: "lg" }}>
+            Since then I have worked across banking, energy, consumer goods,
+            identity technology and delivery platforms. In June 2024, I moved
+            to Germany for an MSc in Data Science, AI & Digital Business, and in
+            January 2026 I joined Delivery Hero as a Pricing Data Analyst.
+          </Text>
+          <Text color="whiteAlpha.800" fontSize={{ base: "md", md: "lg" }}>
+            Outside work, I enjoy traveling, learning languages, calisthenics
+            and football. I bring that same curiosity into teams: direct,
+            collaborative and focused on making complex systems easier to use.
+          </Text>
+          <HStack gap={2} flexWrap="wrap">
+            {principles.map((principle) => (
+              <Badge
+                key={principle}
+                bg="rgba(255, 255, 255, 0.08)"
+                color="whiteAlpha.900"
+                borderRadius="full"
+                px={3}
+                py={1}
               >
-                @Pontifical Catholic University of Peru
-              </Link>{" "}
-              , and my journey into the world of data began in 2019 when I took
-              my first course in Power BI. That was the moment I fell in love
-              with data, leading me to continue learning SQL and Python on my
-              own.
-            </Text>
-            <Text fontSize={"lg"} py={1}>
-              In 2020, I started my first internship as an IT Intern in the
-              banking sector, where I gained valuable experience in data
-              visualization and project management. The following year, in 2021,
-              I worked as a Professional Intern in the energy sector, automating
-              workflows and reports using Power Automate and Power BI. By 2022,
-              I landed my first full-time role as a Data Analyst in the brewery
-              industry, where I developed high-quality dashboards and conducted
-              deep statistical data analysis. During this period, I also honed
-              my skills in Data Engineering and Machine Learning.
-            </Text>
-            <Text fontSize={"lg"} py={1}>
-              In June 2024, I moved to Germany to pursue a Master’s degree in
-              Data Science, AI & Digital Business. A few months later, I started
-              working as a Working Student Software Engineer, where I deepened
-              my knowledge of React, TypeScript, and Node.js, with a strong
-              focus on Front-End Development.
-            </Text>
-              <Text fontSize={"lg"} py={1}>
-              On January 2026 I started a new challenge, joining Delivery Hero as a
-              Pricing Data Analyst, where I am currently working on pricing strategies
-              and data analysis for the company's delivery platform.
-            </Text>
-            <Text fontSize={"lg"} py={2}>
-              I am a self-driven learner who is always eager to embrace new
-              challenges and opportunities for growth. My passion lies in
-              technology, data, and innovation. I thrive in multicultural
-              environments, enjoy team collaboration, and continuously seek to
-              expand my expertise. As a native Spanish speaker, I am fluent in
-              English and currently learning German and Arabic.
-            </Text>
-            <Text fontSize={"lg"} py={1}>
-              Beyond my professional journey, I have a deep love for traveling,
-              exploring new cultures, trying new food , and meeting new people. 
-              I am a passionate calisthenics enthusiast, and an avid Champions League fan
-              of course supporting Bayern München.
-            </Text>
-          </VStack>
-          {/* Imagen */}
-          <Box display="flex" justifyContent="center">
-            <Image
-              borderRadius="lg"
-              shadow={"md"}
-              height={{ base: "400px", md: "500px", lg: "500px" }}
-              width={{ base: "200px", md: "300px", lg: "300px" }}
-              src={roberto}
-              alt="Roberto Berrocal in London"
-            />
-          </Box>
-        </Stack>
-      </VStack>
+                {principle}
+              </Badge>
+            ))}
+          </HStack>
+        </VStack>
+      </SimpleGrid>
     </Box>
   );
 };
